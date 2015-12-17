@@ -17,8 +17,8 @@ int main() {
 	doGC();
 	currentTimestamp(&stopTime);
 
-	printAlive();
-	//printf("%lf\n", stopTime-startTime);
+	//printAlive();
+	printf("%lf\n", stopTime-startTime);
 	return 0;
 }
 

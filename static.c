@@ -44,8 +44,8 @@ void doGC() {
 		doMaster();
 		stopTime = MPI_Wtime();
 
-		printAlive();
-		//printf("%lf\n", stopTime-startTime);
+		//printAlive();
+		printf("%lf\n", stopTime-startTime);
 	} else {
 		doWorker();
 	}
