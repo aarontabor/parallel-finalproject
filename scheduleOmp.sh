@@ -9,7 +9,7 @@ schedule() {
 	outputFileName=$2
 	script=$3
 	# reserve, as all these threads need to be on a single machine
-	qsub -R y -l h_rt=00:01:00 -cwd -pe openmp $np -N $outputFileName -o $resultsDir/$outputFileName $script
+	qsub -R y -l h_rt=00:01:00 -l h_stack=512M -cwd -pe openmp $np -N $outputFileName -o $resultsDir/$outputFileName $script
 }
 
 mkdir $resultsDir

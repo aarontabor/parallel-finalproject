@@ -8,7 +8,7 @@ schedule() {
 	np=$1
 	outputFileName=$2
 	script=$3
-	echo "qsub -l h_rt=00:01:00 -cwd -pe ompi $np -N $outputFileName -o $resultsDir/$outputFileName $script"
+	qsub -l h_rt=00:01:00 -l h_stack=512M -cwd -pe ompi $np -N $outputFileName -o $resultsDir/$outputFileName $script
 }
 
 mkdir $resultsDir
